@@ -1,16 +1,15 @@
 /* General Reset */
-body, h1, p, button {
+body, h1, h2, p, button {
     margin: 0;
     padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Body Styling */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #f093fb);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
@@ -20,16 +19,17 @@ body {
 
 /* Container */
 .container {
-    text-align: center;
-    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 
-/* Header Styling */
+/* Header */
 header h1 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -37,27 +37,18 @@ header h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     animation: gradientText 5s ease infinite;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
-/* Main Content */
-main p {
+/* Main Section */
+main .intro {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Styling */
-footer p {
-    font-size: 0.9rem;
-    margin-top: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-/* Neon Button */
-button {
+.neon-button {
     font-size: 1.2rem;
     padding: 15px 30px;
     color: #fff;
@@ -65,15 +56,54 @@ button {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 20px rgba(255, 95, 109, 0.9), 0 0 40px rgba(255, 195, 113, 0.9);
     animation: buttonGlow 3s ease infinite alternate;
     transition: transform 0.3s;
 }
 
-button:hover {
+.neon-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 195, 113, 1);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 195, 113, 1);
+}
+
+/* Gallery Section */
+.gallery {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #34e89e, #0f3443);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 /* Animations */
